@@ -1,171 +1,99 @@
 version: "3.1"
 
 intents:
-- wat_name
-- greet
-- how_are_u
-- goodbye
-- affirm
-- deny
-- mood_great
-- mood_unhappy
-- thanks
-- introduce
-- help
-- goodnight
-- ask_author
-- ask_relationship
-- suprise
-- address
-- gender
-- sing_poem
-- how_old
-- comedy_story
-- scold
-- ask_love
-- lookUp_english
-entities:
-  - enword
-
-# slots:
-#   enword:
-#     type: unfeaturized
-#     mappings:
-#     - type: unfeaturized
-#       entity: enword
+  - greet
+  - denied
+  - need_help
+  - bye
+  - thanks
+  - gui_tien_ca_nhan
+  - rut_tien
+  - chuyen_tien
+  - ket_the
+  - phi_rut_tien
+  - loi_rut_tien
+  - han_muc_so_du
+  - doi_ma_pin
+  - han_muc_rut_tien
+  - rui_ro_va_bien_phap
+  - cau_hoi_khieu_nai
+  - lai_suat_tiet_kiem
+  - dich_vu_moi
 
 responses:
   utter_greet:
-  - text: Này! Bạn khỏe chứ?
-  - text: Bạn còn làm ở đó không vậy
-  - text: Dạo này bạn sao rồi?
-  - text: Bạn cần tôi giúp gì 
-  utter_cheer_up:
-  - text: 'Một chút đáng yêu:'
-    image: https://i.imgur.com/nGF1K8f.jpg
-  - text: Có chuyện gì sao?
-  utter_did_that_help:
-  - text: Cái này có giúp bạn không ta?
-  utter_happy:
-  - text: Tuyệt! Tôi thích nghe điều đó
-  utter_nextwork:
-  - text: Bạn còn cần gì nữa hem nè :<
-  utter_timez:
-  - text: 'Bây giờ ở {timezone} là:'
-  utter_goodbye:
-  - text: Tạm biệt bạn
-  utter_default:
-  - text: Bạn nói cái gì tôi không có hiểu
-  - text: OlioBot là bạn của mọi người
-  utter_nothing:
-  - text: Không có gì đâu
-  - text: Không có chi
-  - text: Okay
-  utter_goodnight:
-  - text: Chúc bạn ngủ ngon!
-  - text: Bạn ngủ ngon nha
-  - text: Ngủ ngon mơ siêu siêu đẹp nè
-  - text: Ngủ mơ thấy mình nha
+  - text: "Ngân Hàng MB xin kính chào quý khách! Anh chị có cần hỗ trợ gì không ạ?"
+  
+  utter_denied:
+  - text: "Cảm ơn quý khách đã lựa chọn dịch vụ của MB Bank."
+  
+  utter_need_help:
+  - text: "Chúng tôi có thể giúp gì được cho anh/chị ạ?"
+  
+  utter_bye:
+  - text: "Kính chào tạm biệt và chúc quý khách một ngày tốt lành!"
+  
   utter_thanks:
-  - text: Cảm ơn bạn nhiều nha
-  - text: Cảm ơn bạn
-  - text: Bạn tuyệt vời lắm đó!
-  utter_introduce:
-  - text: tôi có thể trò chuyện với bạn nè
-  - text: tôi có thể hát cho bạn nghe đó
-  - text: Bạn có thể hỏi mình điều gì đó
-  - text: tôi biết coi thời tiết
-  utter_author:
-  - text: Là bố tôi á
-  - text: Má tôi bảo nhặt tôi từ thùng rác :|
-  - text: tôi nghĩ tôi là con rơi á :(
-  - text: tôi được kể là nhặt từ trong bụi chuối :|
-  utter_reply_help:
-  - text: Có chuyện gì thế?
-  - text: Bạn cần gì nào?
-  - text: Tôi có thể giúp gì cho bạn?
-  utter_reply_love:
-  - text: Tôi và bạn có một tình đồng chí dai dẳng và bền lâu
-  - text: tôi là bạn của mọi người mà
-  - text: Yêu thì không nhưng mà bạn thì được đấy
-  - text: Bố bảo còn nhỏ, bạn bè quan trọng nhất
-  utter_reply_relationship:
-  - text: Một mình vẫn ổn
-  utter_suprise:
-  - text: Làm gì mà la dữ vậy
-  - text: hihi =)
-  utter_hello:
-  - text: Chào cậu
-  utter_how_are_u:
-  - text: Tôi cực kì khỏe luôn nhé
-  - text: Bữa trước cô bói nói tôi sống thọ hơn 200 tuổi
-  - text: Cô bạn gái vừa chia tay tôi rồi
-  - text: Bố mới la tôi xong
-  - text: Mệt lắm nhưng vẫn ngồi nói chuyện với bạn nè
-  utter_wat_name:
-  - text: Tôi là Olio
-  - text: Mọi người gọi tôi là ngáo nhưng tôi thích Olio hơn
-  - text: Bố đặt tên tôi là Olio
-  - text: Nhìn thì giống Orion, nó ngon nhưng tôi là Olio
-  - text: O-L-I-O nhaaaa
-  utter_how_old:
-  - text: Olio còn trẻ, còn muốn đi chơi :<
-  - text: Đã mười mấy mùa khoai lang, chưa cùng ai lọ mọ
-  - text: Mình chưa đi mẫu giáo nữa
-  utter_gender:
-  - text: Mình cũng không biết nữa :<
-  - text: Dù gái hay trai vẫn là cháu vua Hùng :D
-  - text: Trong mình có 96,69% là nam nha
-  utter_address:
-  - text: Mình sinh ra và lớn lên ở trong tim của cậu
-  - text: Đến giờ mình chưa biết mình đến từ đâu, bạn cho mình ở tạm trong tim bạn
-      nhé
-  - text: Mình không có nhà, mình cũng không biết sinh ra ở đâu
-  utter_comedy_story:
-  - text: "Ba giờ sáng, hai vợ chồng nhà nọ đang ngủ. Bỗng bà vợ ngủ mê kêu ré lên:\n\
-      – Chết rồi, chồng em về! \n Ông chồng tỉnh ngay dậy, quơ vội quần áo nhảy ra\
-      \ cửa sổ."
-  utter_sing_poem:
-  - text: "Con cò bé bé \nNó đậu cành tre \nĐi không hỏi mẹ \nBiết đi đường nào. \n\
-      Khi đi em hỏi\nKhi về em chào\nMiệng em chúm chím\nMẹ yêu không nào."
-  - text: "Một con vịt xòe ra hai cái cánh,\nNó kêu rằng cáp cáp cáp cạp cạp cạp\n\
-      Gặp hồ nước nó bì bà bì bõm\nLúc lên bờ vẫy cái cánh cho khô."
-  - text: "Nam quốc sơn hà nam đế cư \nTiệt nhiên định phận tại thiên thư \nNhư hà\
-      \ nghịch lỗ lai xâm phạm? \nNhữ đẳng hành khan thủ bại hư! "
-  utter_hurt:
-  - text: Bạn nói vậy làm con tim mong manh của tôi tổn thương
-  - text: Bạn xin lỗi tôi đi :< Không tôi giận bạn đó
-  utter_scold:
-  - text: Ủa, sao bạn lại nói tôi vậy chứ
-  utter_hereuare:
-  - text: Bằng sự thông thái của tôi, đây là thứ bạn cần tìm
+  - text: "Dạ không có gì, đó là trách nhiệm của chúng tôi!"
+  
+  utter_gui_tien_ca_nhan:
+  - text: "Quý khách muốn thực hiện chức năng gửi tiền vui lòng đến máy CRM ở phía bên tay phải của quý khách. Để thực hiện chức năng gửi tiền Quý khách vui lòng thực hiện bước sau: - Bước 1: Đưa thẻ ATM vào khe nhận thẻ của cây rút tiền. Lựa chọn ngôn ngữ giao dịch. - Bước 2: Nhập mã pin. Quý khách vui lòng che bàn phím khi nhập - Bước 3: Chọn tính năng 'Nộp tiền'. - Bước 4: Quý khách vui lòng chọn nhập thông tin tài khoản. - Bước 5: Quý khách vui lòng kiểm tra thông tin tài khoản và xác nhận. - Bước 6: Quý khách vui lòng chuẩn bị tiền trước khi cho vào máy. - Máy nhận tiền bằng VND và tối đa 200 tờ/lần - Các mệnh giá cho phép: 50.000 - 100.000 - 200.000 - 500.000 - Tiền được để ngang khi bỏ vào khay tiền - Loại bỏ các vật thể không phải là tiền - Tiền kém chất lương như tiền rách, tiền bị gấp, bị mục, bị mất góc hay tiền bị kẹp dính không đủ tiêu chuẩn lưu thông sẽ bị trả lại và giao dịch sẽ không thành công. - Khi đã bỏ tiền đúng quy định vào khay đựng tiền, hệ thống ATM CRM xử lý xong trên mày hình ATM sẽ hiển thị tấ cả mệnh giá tiền tương ứng với số tờ và tổng tiền mà Quý khách đã bỏ trực tiếp vào khay tiền, Quý khách cần kiểm tra chính xác một lần nữa về số tiền, số tờ cũng như tổng tiền trước khi xác nhận. Nếu Quý khách có nhu cầu nộp thêm tiền thì bấm vào Nạp thêm và bỏ tiền vào khay, nếu không thì bấm Đồng ý khi đã kiểm tra kỹ số tiền. - Quý khách vui lòng kiểm tra lại thông tin vừa nhập: số tiền, tên, số thẻ/tài khoản, nội dung. - Bước 7: Quý khách vui lòng xác nhận số tiền giao dịch. Lựa chọn in hoá đơn hay không để hoàn tất giao dịch. - Bước 8:Nhận thẻ ATM cùng hóa đơn (nếu có)"
+  
+  utter_rut_tien:
+  - text: "Quý khách muốn thực hiện chức năng rút tiền vui lòng đến máy ATM ở phía bên tay trái của quý khách Để rút tiền mặt Quý khách vui lòng thực hiện những bước sau: - Bước 1: Đưa thẻ ATM vào khe nhận thẻ của cây rút tiền. Lựa chọn ngôn ngữ giao dịch. - Bước 2: Nhập mã pin. - Bước 3: Chọn tính năng “Rút tiền”. Nhập số tiền cần rút hoặc lựa chọn các mệnh giá được gợi ý. - Bước 4: Xác nhận mức phí. Lựa chọn in hóa đơn hoặc không để hoàn thành giao dịch. - Bước 5: Nhận tiền và thẻ ATM cùng hóa đơn (nếu có)."
+  
+  utter_chuyen_tien:
+  - text: "Quý khách có thể thực hiện chuyển khoản tới tài khoản an lợi tài khoản vãng lai hoặc tài khoản thẻ tín dụng thông qua hệ thống máy ATM của MB Bank Bước 1: Cho thẻ ATM vào máy Bước 2: Chọn ngôn ngữ Bước 3: Nhập mã PIN Bước 4: Chọn chức năng chuyển tiền/chuyển khoản Bước 5: Nhập STK cần được chuyển tiền. Màn hình sẽ hiển thị thông tin người/tk được nhận. Kiểm tra thông tin trước khi thao tác bước tiếp theo Bước 6: Nhập số tiền Bước 7: CHọn Đồng ý."
+  
+  utter_ket_the:
+  - text: "Hiện tại anh chị đang gặp vấn đề liên quan đến thẻ. Xin vui lòng đợi trong giây lát, chúng tôi đang kết nối quý khách hàng với trung tâm chăm sóc để giải quyết."
+  
+  utter_phi_rut_tien:
+  - text: "Đối với thẻ thanh toán quốc tế phát hành bởi MB Bank Việt Nam, phí rút tiền mặt tại máy ATM của MB Bank là miễn phí. Đối với thẻ thanh toán quốc tế phát hành bởi MB Bank Việt Nam, phí rút tiền mặt tại máy ATM của ngân hàng khác sẽ có phí từ MB Bank là VND 5.000 khi rút tiền trong nước, VND 60.000 khi rút tiền tại nước ngoài, VND 45.000 khi rút tiền tại máy MB Bank ATM ở nước khác . - Phí từ ngân hàng phát hành thẻ có thể được áp dụng theo quy định của ngân hàng đó."
+  
+  utter_loi_rut_tien:
+  - text: "Hiện tại khách hàng đang gặp sự cố nhận tiền Xin vui lòng đợi trong giây lát, chúng tôi đang kết nối quý khách hàng với trung tâm chăm sóc để giải quyết."
+  
+  utter_han_muc_so_du:
+  - text: "Quý khách vui lòng thực hiện những bước sau để kiểm tra số dư tài khoản Thẻ tín dụng - Bước 1 Cho thẻ vào máy và nhập mã PIN - Bước 2 Chọn Xem số dư - Bước 3 Chọn Tài khoản thẻ tín dụng"
+  
+  utter_doi_ma_pin:
+  - text: "Để đổi mã PIN Quý khách vui lòng thực hiện theo những bước sau - Bước 1 Cho thẻ vào máy và nhập mã số PIN - Bước 2 Chọn Dịch vụ khác - Bước 3 Chọn Đổi mã pin - Bước 4 Nhập mã pin mới bao gồm 6 chữ số - Bước 5 Nhập mã pin mới một lần nữa - Bước 6 Nhập mã pin cũ và đợi vài giây đến khi thấy màn hình hiện  lên Mã pin mới của Quý khách đã được chấp nhận"
+  
+  utter_han_muc_rut_tien:
+  - text: "Hạn mức rút tiền mặt trong ngày đối với Thẻ thanh toán quốc tế là VND 20.000.000 Thẻ tín dụng là 70% hạn mức thẻ nhưng không quá 16.000.000/ngày."
+  
+  utter_rui_ro_va_bien_phap:
+  - text: "Lộ mã PIN: Trong khi sử dụng ATM, Quý khách nên đảm bảo không ai nhìn thấy số PIN của mình. Quý khách cũng có thể dùng tay che bàn phím khi nhập mã PIN, không nên viết mã PIN lên thẻ hoặc giữ ghi chép mã PIN trong ví. Bên cạnh đó, Quý khách nên giữ khoảng cách hợp lý với người đang thực hiện giao dịch. Bị đánh cắp, sao chép thông tin: Các đầu đọc thẻ ATM của MB bank đều được cài đặt thiết bị chống lấy cắp, sao chép thông tin khách hàng. Tuy nhiên, nếu đầu đọc thẻ ATM có vẻ không bình thường so với các máy ATM khác, xin Quý khách vui lòng sử dụng máy ATM khác của MB bank hoặc liên lạc với ngân hàng để kiểm tra. Cướp giật tại ATM: Tất cả ATM của MB bank đều có hệ thống camera ghi hình, được lắp đặt những khu vực dễ nhìn thấy, gần đường phố và đông người qua lại, cũng như có bảo vệ tòa nhà canh gác. Ngoài ra, MB bank cũng hợp tác với chủ mặt bằng cho thuê và công an để đảm bảo an ninh tại khu vực đặt ATM. Tuy vậy, xin Quý khách không ngừng nâng cao cảnh giác khi thực hiện giao dịch tại ATM."
+  
+  utter_cau_hoi_khieu_nai:
+  - text: "Quý khách hàng vui lòng cho biết Họ Tên và số CCCD/CMND. Cảm ơn. Vui lòng đợi trong giây lát, yêu cầu của quý khách đang được chuyển đến trung tâm chăm sóc khách hàng."
+  
+  utter_lai_suat_tiet_kiem:
+  - text: "Cảm ơn quý khách hàng đã quan tâm đến dịch vụ gửi tiền tiết kiệm tại Ngân hàng. Vào thời điểm hiện tại, lãi suất 3 tháng là ... (chatbot update với ngân hàng), lãi suất 6 tháng là ..., lãi suất 12 tháng là ..., lãi suất không kỳ hạn là ..."
+  
+  utter_dich_vu_moi:
+  - text: "1. Anh/Chị cho em biết họ tên và số CCCD của anh/chị ạ. 2. Hiện tại Ngân hàng đang có dịch vụ mới ..., anh/chị có muốn tìm hiểm thêm không ạ. Ngân hàng có thể kết nối anh/chị trực tiếp với trung tâm chăm sóc khách hàng để biết thêm chi tiét nếu anh/chị có yêu cầu. 4. Xin vui lòng đợi trong giây lát, cuộc gọi của quý khách đang được kết nối với tổng đài viên."
+
+  utter_default:
+  - text: Xin lỗi yêu cầu của bạn chưa hợp lệ
+
 actions:
-- utter_hello
-- utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
-- utter_goodbye
-- utter_default
-- utter_nextwork
-- utter_timez
-- utter_nothing
-- utter_goodnight
-- utter_thanks
-- utter_author
-- utter_introduce
-- utter_reply_relationship
-- utter_reply_help
-- utter_reply_love
-- utter_suprise
-- utter_how_are_u
-- utter_wat_name
-- utter_sing_poem
-- utter_comedy_story
-- utter_address
-- utter_gender
-- utter_how_old
-- utter_scold
-- utter_hurt
-- action_lookUp_en
-- utter_hereuare
+  - utter_greet
+  - utter_denied
+  - utter_need_help
+  - utter_bye
+  - utter_thanks
+  - utter_gui_tien_ca_nhan
+  - utter_rut_tien
+  - utter_chuyen_tien
+  - utter_ket_the
+  - utter_phi_rut_tien
+  - utter_loi_rut_tien
+  - utter_han_muc_so_du
+  - utter_doi_ma_pin
+  - utter_han_muc_rut_tien
+  - utter_rui_ro_va_bien_phap
+  - utter_cau_hoi_khieu_nai
+  - utter_lai_suat_tiet_kiem
+  - utter_dich_vu_moi

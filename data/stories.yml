@@ -5,149 +5,90 @@ stories:
 - story: happy path
   steps:
   - intent: greet
-  - action: utter_hello
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
-- story: sad path 1
+- story: denied
   steps:
   - intent: greet
-  - action: utter_hello
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - action: utter_denied
 
-- story: sad path 2
+- story: need_help
   steps:
-  - intent: greet
-  - action: utter_hello
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: need_help
+  - action: utter_need_help
 
-- story: greet path 2
+- story: bye
   steps:
-  - intent: greet
-  - action: utter_hello
-  - action: utter_greet
-  - intent: deny
-  - action: utter_reply_help
+  - intent: bye
+  - action: utter_bye
 
-- story: say goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
-
-- story: fallback
-  steps:
-  - action: utter_default
-
-- story: fallback
-  steps:
-  - action: utter_default
-
-- story: fallback
+- story: thanks
   steps:
   - intent: thanks
-  - action: utter_nothing
-  - action: utter_nextwork
-
-- story: say introduce
-  steps:
-  - intent: introduce
-  - action: utter_introduce
-
-- story: goodnight
-  steps:
-  - intent: goodnight
   - action: utter_thanks
-  - action: utter_goodnight
 
-# - story: ask author
-#   steps:
-#   - intent: ask_author
-#   - action: utter_thutter_authoranks
-
-- story: help
+- story: gui_tien_ca_nhan
   steps:
-  - intent: help
-  - action: utter_reply_help
+  - intent: gui_tien_ca_nhan
+  - action: utter_gui_tien_ca_nhan
 
-- story: suprise
+- story: rut_tien
   steps:
-  - intent: suprise
-  - action: utter_suprise
+  - intent: rut_tien
+  - action: utter_rut_tien
 
-- story: ask love
+- story: chuyen_tien
   steps:
-  - intent: ask_love
-  - action: utter_reply_love
+  - intent: chuyen_tien
+  - action: utter_chuyen_tien
 
-- story: ask_information path
+- story: ket_the
   steps:
-  - intent: wat_name
-  - action: utter_wat_name
-  - intent: how_old
-  - action: utter_how_old
-  - intent: gender
-  - action: utter_gender
-  - intent: address
-  - action: utter_address
+  - intent: ket_the
+  - action: utter_ket_the
 
-- story: how old
+- story: phi_rut_tien
   steps:
-  - intent: how_old
-  - action: utter_how_old
+  - intent: phi_rut_tien
+  - action: utter_phi_rut_tien
 
-- story: gender
+- story: loi_rut_tien
   steps:
-  - intent: gender
-  - action: utter_gender
+  - intent: loi_rut_tien
+  - action: utter_loi_rut_tien
 
-- story: address
+- story: han_muc_so_du
   steps:
-  - intent: address
-  - action: utter_address
+  - intent: han_muc_so_du
+  - action: utter_han_muc_so_du
 
-- story: how are u
+- story: doi_ma_pin
   steps:
-  - intent: how_are_u
-  - action: utter_how_are_u
+  - intent: doi_ma_pin
+  - action: utter_doi_ma_pin
 
-- story: sing poem
+- story: han_muc_rut_tien
   steps:
-  - intent: sing_poem
-  - action: utter_sing_poem
+  - intent: han_muc_rut_tien
+  - action: utter_han_muc_rut_tien
 
-- story: comedy_story
+- story: rui_ro_va_bien_phap
   steps:
-  - intent: comedy_story
-  - action: utter_comedy_story
+  - intent: rui_ro_va_bien_phap
+  - action: utter_rui_ro_va_bien_phap
 
-- story: affirm
+- story: cau_hoi_khieu_nai
   steps:
-  - intent: affirm
-  - action: utter_nextwork
+  - intent: cau_hoi_khieu_nai
+  - action: utter_cau_hoi_khieu_nai
 
-- story: scold
+- story: lai_suat_tiet_kiem
   steps:
-  - intent: scold
-  - action: utter_scold
-  - action: utter_hurt
+  - intent: lai_suat_tiet_kiem
+  - action: utter_lai_suat_tiet_kiem
 
-- story: ask relationship
+- story: dich_vu_moi
   steps:
-  - intent: ask_relationship
-  - action: utter_reply_relationship
+  - intent: dich_vu_moi
+  - action: utter_dich_vu_moi
 
-- story: look up dictionary
-  steps:
-  - intent: lookUp_english
-  - action: action_lookUp_en

@@ -8,3 +8,5 @@ tracker\.db
 duckling/
 
 models/
+
+.rasa/**

@@ -21,6 +21,9 @@ intents:
   - dich_vu_moi
 
 responses:
+  utter_default:
+  - text: Xin lỗi yêu cầu của bạn chưa hợp lệ. Xin vui lòng thử lại
+
   utter_greet:
   - text: "Ngân Hàng MB xin kính chào quý khách! Anh chị có cần hỗ trợ gì không ạ?"
   
@@ -75,9 +78,6 @@ responses:
   utter_dich_vu_moi:
   - text: "1. Anh/Chị cho em biết họ tên và số CCCD của anh/chị ạ. 2. Hiện tại Ngân hàng đang có dịch vụ mới ..., anh/chị có muốn tìm hiểm thêm không ạ. Ngân hàng có thể kết nối anh/chị trực tiếp với trung tâm chăm sóc khách hàng để biết thêm chi tiét nếu anh/chị có yêu cầu. 4. Xin vui lòng đợi trong giây lát, cuộc gọi của quý khách đang được kết nối với tổng đài viên."
 
-  utter_default:
-  - text: Xin lỗi yêu cầu của bạn chưa hợp lệ
-
 actions:
   - utter_greet
   - utter_denied
@@ -97,3 +97,4 @@ actions:
   - utter_cau_hoi_khieu_nai
   - utter_lai_suat_tiet_kiem
   - utter_dich_vu_moi
+  - utter_default

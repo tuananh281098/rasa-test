@@ -92,3 +92,7 @@ stories:
   - intent: dich_vu_moi
   - action: utter_dich_vu_moi
 
+- story: fallback
+  steps:
+  - action: utter_default
+

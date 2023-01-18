@@ -10,3 +10,5 @@ duckling/
 models/
 
 .rasa/**
+
+results/**

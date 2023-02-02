@@ -15,7 +15,8 @@ stories:
 - story: need_help
   steps:
   - intent: need_help
-  - action: utter_need_help
+  # - action: utter_need_help
+  - action: action_show_help
 
 - story: bye
   steps:
@@ -95,4 +96,3 @@ stories:
 - story: fallback
   steps:
   - action: utter_default
-

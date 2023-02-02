@@ -19,6 +19,7 @@ intents:
   - cau_hoi_khieu_nai
   - lai_suat_tiet_kiem
   - dich_vu_moi
+  - show_help
 
 responses:
   utter_default:
@@ -98,3 +99,4 @@ actions:
   - utter_lai_suat_tiet_kiem
   - utter_dich_vu_moi
   - utter_default
+  - action_show_help

@@ -24,7 +24,17 @@ nlu:
     - cần
     - cần hỗ trợ
     - Tôi cần hỗ trợ
-
+    - Tôi cần trợ giúp
+    - Tôi muốn danh sách các câu hỏi
+    - Tôi muốn lít câu hỏi
+    - Tôi muốn các câu hỏi thường gặp
+    - Trợ giúp
+    - Danh sách câu hỏi
+    - Câu hỏi có thể trả lời
+    - Lít câu hỏi
+    - Tôi có thể hỏi những gì
+    - Bạn có thể trả lời gì
+    - Bạn biết những gì
 - intent: bye
   examples: |
     - Tạm biệt bạn
@@ -153,3 +163,5 @@ nlu:
 - intent: dich_vu_moi
   examples: |
     - Các sản phẩm mới
+
+  

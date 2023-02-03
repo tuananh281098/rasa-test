@@ -34,7 +34,7 @@ class ActionShowHelp(Action):
     ) -> List[Dict[Text, Any]]:
         list_ques = {
             "Rút tiền như thế nào",
-            "Làm thế nào khi bị nuốt thể",
+            "Làm thế nào khi bị nuốt thẻ",
             "Chuyển khoản thế nào",
         }
         res = "Đây là một sô câu hỏi tôi có thể trả lời:\n" + "\n".join(list_ques)

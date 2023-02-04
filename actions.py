@@ -33,16 +33,16 @@ class ActionShowHelp(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
         list_ques = {
-            "Rút tiền như thế nào",
-            "Làm thế nào khi bị nuốt thẻ",
-            "Chuyển khoản thế nào",
-            "Làm thế nào để nạp tiền",
-            "Phí rút tiền",
-            "Làm thế nào khi rút tiền lỗi",
-            "Cách kiểm tra số dư tài khoản",
-            "Cách đổi mã pin",
-            "Hạn mức rút tiền",
-            "Lãi suất tiết kiệm",
+            "Rút tiền như thế nào?",
+            "Làm thế nào khi bị nuốt thẻ?",
+            "Chuyển khoản thế nào?",
+            "Làm thế nào để nạp tiền?",
+            "Phí rút tiền là bao nhiêu?",
+            "Làm thế nào khi rút tiền lỗi?",
+            "Kiểm tra số dư tài khoản thế nào?",
+            "Đổi mã pin thế nào?",
+            "Hạn mức rút tiền là bao nhiêu?",
+            "Lãi suất tiết kiệm là bao nhiêu?",
         }
         res = "Đây là một số câu hỏi tôi có thể trả lời:\n- " + "\n- ".join(list_ques)
         dispatcher.utter_message(text=res)

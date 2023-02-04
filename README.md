@@ -18,3 +18,27 @@
  - https://medium.com/@itsromiljain/build-a-conversational-chatbot-with-rasa-stack-and-python-rasa-nlu-b79dfbe59491 -> how to build a rasa chat bot step by step
  - https://github.com/RasaHQ/rasa/pull/1312 -> import file txt to training data
 
+
+## Build Rasa to server
+### 1. Config
+- Tải file rsa key (chatbot.pem) và cop vào thư mục `.ssh` (nếu chưa có thì tạo folder này `C:\Users\your_username\.ssh`)
+- Tạo file config trong thư mục `/.ssh`
+- Edit file config thêm đoạn config sau:
+    ~~~
+    Host chatbot
+    HostName ec2-13-251-78-23.ap-southeast-1.compute.amazonaws.com
+    User ubuntu
+    IdentityFile "`đường dẫn tới file chatbot.pem`"
+    ~~~
+### 2. Train model
+- Train model ở máy local bằng lệnh `rasa train`
+### 3. Build
+- Sau khi train, tải model mới nhất lên server bằng lệnh  
+`scp -i ~/.ssh/chatbot.pem -r ~/vietnamese-chat-with-rasa/models/`model-name]`.tar.gz ubuntu@13.251.78.23:rasa-voice-chat/models`
+- Connect đến server bằng lệnh `ssh chatbot`
+- Dùng venv `source voice-chatbot-venv/bin/activate`
+- Chuyển đến thư mục `rasa-voice-chat`
+- Kill rasa server nếu nó đang chạy `sudo kill -9 $(sudo lsof -t -i:5000)`
+- Kill rasa actions nếu nó đang chạy `sudo kill -9 $(sudo lsof -t -i:5055)`
+- Restart rasa server `nohup rasa run &`
+- Restart rasa actions `nohup rasa run actions &`
